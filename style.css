@@ -985,9 +985,7 @@ div#map iframe {
     }
 }
 
-.footer,.contact_wrapper{
-    display: none;
-}
+
 
 @media screen and (max-width:576px) {
     html{
@@ -1207,7 +1205,7 @@ div#map iframe {
     .team_persons {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 350px);
+        grid-template-rows: repeat(4, 280px);
         margin-top: 20px;
         padding: 15px;
     }
@@ -1224,5 +1222,30 @@ div#map iframe {
 
     .price_card ul li {
         font-size: 1.4rem;
+    }
+
+    .hero_btn {
+        font-size: 1rem;
+        padding: 20px 20px;
+        outline: none;
+    }
+
+    .contact_item{
+        width: 90%;
+    }
+    .challenge_form {
+        grid-template-columns: repeat(2, 140px);
+    }
+    .price_wrapper h2 {
+        font-size: 1.7rem;
+    }
+    .price_card{
+        min-width: 280px;
+    }
+    .hero_btn {
+        padding: 20px 50px;
+    }
+    div#map iframe{
+        height: 300px;
     }
 }
