@@ -985,7 +985,7 @@ div#map iframe {
     }
 }
 
-.footer,.price_wrapper,.contact_wrapper{
+.footer,.contact_wrapper{
     display: none;
 }
 
@@ -1147,7 +1147,14 @@ div#map iframe {
         display: none;
     }
     .excersise_wrap {
-        grid-template-rows: repeat(2, 90px);
+        grid-template-rows: repeat(2, 170px);
+    }
+    .training_tittles p{
+        margin-bottom: 30px;
+    }
+    .excersise h4 {
+        padding-right: 20px;
+        font-weight: 600;
     }
     .excersise1 {
         grid-area: 1 / 1 / 2 / 7;
@@ -1212,5 +1219,10 @@ div#map iframe {
     }
     .person1,.person4{
         display: none;
+    }
+
+
+    .price_card ul li {
+        font-size: 1.4rem;
     }
 }
