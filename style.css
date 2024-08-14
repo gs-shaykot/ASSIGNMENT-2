@@ -353,7 +353,7 @@ div#habit_wrapper {
 .excersise_wrap {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(2, 250px);
 }
 
 .excersise {
