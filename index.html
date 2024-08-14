@@ -17,11 +17,11 @@
             <div class="logo">
                 <h2>Fitness</h2>
             </div>
-                <input type="checkbox" id="navbar_active">
-                <label id="overlay" for="navbar_active"></label>
-                <label for="navbar_active">
-                    <i class="nav_open fa-solid fa-bars"></i>
-                </label>
+            <input type="checkbox" id="navbar_active">
+            <label id="overlay" for="navbar_active"></label>
+            <label for="navbar_active">
+                <i class="nav_open fa-solid fa-bars"></i>
+            </label>
             <nav class="nav">
                 <label for="navbar_active">
                     <i class="nav_close fa-solid fa-x"></i>
@@ -63,8 +63,7 @@
             <div id="habit_wrapper">
                 <div class="tittles">
                     <h2>Change Your Habits</h2>
-                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access
-                        to a gym.</p>
+                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or <br> access to a gym.</p>
                 </div>
                 <div class="habit_cards">
                     <div class="habit habit1">
@@ -96,10 +95,10 @@
                         Mile Easily</h2>
                     <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access
                         to a gym. With hundreds of professional workouts.</p>
-                    <button class="hero_btn">Join Now</button>
+                    <button class="join_btn hero_btn">Join Now</button>
                 </div>
                 <div class="card_img">
-                    <!-- <img src="img/run.jpg" alt=""> -->
+                    <img src="img/run.jpg" alt="">
                 </div>
             </div>
 
@@ -165,17 +164,23 @@
                         </table>
                     </div>
                 </div>
-                <div class="bmi_form"> <!-- training_tittles -->
+
+                <div class="bmi_form">
                     <div class="bmi_tittles">
                         <h2>Calculate your BMI</h2>
                         <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or
-                            access
-                            to a gym.</p>
+                            access to a gym.</p>
                     </div>
                     <form action="" class="form">
-                        <input type="text" required id="height_input" placeholder="Height/cm">
-                        <input type="text" required id="weight_input" placeholder="Weight/kg">
-                        <input type="text" required id="age_input" placeholder="Age">
+                        <div class="name">
+                            <input type="text" required id="height_input" placeholder="Height/cm">
+                        </div>
+                        <div class="weight">
+                            <input type="text" required id="weight_input" placeholder="Weight/kg">
+                        </div>
+                        <div class="age">
+                            <input type="text" required id="age_input" placeholder="Age">
+                        </div>
 
                         <div class="gender_wrapper">
                             <select id="gender">
@@ -194,16 +199,15 @@
                                 <option value="Obese">Obese</option>
                             </select>
                         </div>
-                        <button class="hero_btn calculate-btn">Calculate</button>
                     </form>
+                    <button class="hero_btn calculate-btn">Calculate</button>
                 </div>
             </div>
         </div>
         <div class="team_wrapper">
             <div class="team_tittles tittles">
                 <h2>Meet Our Team</h2>
-                <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access
-                    to a gym.</p>
+                <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or <br> access to a gym.</p>
             </div>
             <div class="team_persons">
                 <div class="person person1">
@@ -308,8 +312,8 @@
                             <option id="options" title="$100/ Yearly">Yearly Pass</option>
                         </select>
                         <textarea id="message" placeholder="Additional Message" maxlength="450"></textarea>
-                        <button class="hero_btn submit">Submit</button>
                     </form>
+                    <button class="hero_btn submit">Submit</button>
                 </div>
                 <div id="map">
                     <iframe
