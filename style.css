@@ -16,7 +16,7 @@ html {
     --primary_color: #e6533c;
     --secondary_color: #222222;
     --font_miama: 'Miama', sans-serif;
-    --para_color: #d1d1d1;
+    --para_color: #808080;
 }
 
 .header {
@@ -25,7 +25,7 @@ html {
     flex-direction: column;
     justify-content: center;
     /* box-shadow: inset 0px -20px 20px 0px #000; */
-    background: linear-gradient(rgba(0,0,0,1) 0%, rgba(34,34,34,1) 28%, rgba(34,34,34,1) 72%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 28%, rgba(34, 34, 34, 1) 72%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* NAV-STYLES */
@@ -49,7 +49,7 @@ html {
 nav.nav {
     border: 2px solid #2e2e2e;
     box-sizing: border-box;
-    border-radius: 30px; 
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,9 @@ nav.nav a:last-child {
     margin-right: 10px;
 }
 
-#navbar_active,.nav_open,.nav_close{
+#navbar_active,
+.nav_open,
+.nav_close {
     display: none;
 }
 
@@ -134,7 +136,7 @@ span.ex_font {
 }
 
 .banner_image {
-    flex-basis: 50%; 
+    flex-basis: 50%;
     display: flex;
     justify-content: flex-end;
 }
@@ -142,10 +144,12 @@ span.ex_font {
 .banner_image img {
     filter: drop-shadow(2px 0px 5px black);
 }
-.hero_img{
+
+.hero_img {
     position: relative;
     display: flex;
 }
+
 .card {
     width: 200px;
     height: 100px;
@@ -163,7 +167,8 @@ span.ex_font {
 .card1 {
     position: absolute;
     top: 20%;
-    right: -20%;
+    right: -10%;
+    width: 180px;
 }
 
 .card1 h4 {
@@ -223,7 +228,6 @@ main.main-wrapper {
 }
 
 .tittles {
-    width: 44%;
     margin: 0 auto;
     text-align: center;
 }
@@ -242,12 +246,17 @@ main.main-wrapper {
     line-height: 25px;
 }
 
+div#habit_wrapper {
+    width: 100%;
+}
+
 .habit_cards {
     gap: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 250px);
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
 }
+
 .habit {
     display: flex;
     flex-direction: column;
@@ -294,12 +303,14 @@ main.main-wrapper {
 
 .card_img {
     flex-basis: 40%;
-    background: url(img/run.jpg) no-repeat;
-    background-size: 340%;
-    background-position: 70% 35%;
-    border-radius: 18px;
-    height: 300px;
+}
+
+.card_img img {
     width: 100%;
+    height: 400px;
+    object-fit: none;
+    object-position: 66% 30%;
+    border-radius: 18px;
 }
 
 .card_content h2 {
@@ -452,6 +463,8 @@ td {
 }
 
 form.form input {
+    width: 100%;
+    height: 100%;
     appearance: textfield;
     background: #383838;
     border: none;
@@ -549,12 +562,13 @@ button.calculate-btn {
 }
 
 .team_persons {
+    width: 85%;
     background: #2e2e2e;
     box-sizing: border-box;
     padding: 25px;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 270px);
     gap: 20px;
     margin-bottom: 60px;
@@ -773,7 +787,7 @@ div#map iframe {
     text-align: center;
     font-size: 2.5rem;
     color: #fff;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 
@@ -790,7 +804,7 @@ div#map iframe {
 .price_card {
     border-radius: 10px;
     background: var(--secondary_color);
-    padding: 50px 40px;
+    padding: 50px 35px;
     transition: 0.4s ease-out;
 }
 
@@ -808,9 +822,11 @@ div#map iframe {
 .price_card ul li {
     padding: 10px 0 30px 0;
 }
+
 .price_card ul li:first-child {
     margin-top: 20px;
 }
+
 .price_card ul li::before {
     content: "\f058";
     font-family: "Font Awesome 6 Free";
@@ -819,72 +835,129 @@ div#map iframe {
 
 }
 
-.price_btn{
-    font-size: 1.12rem;
+.price_btn {
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    padding: 15px 40px;
+    padding: 15px 30px;
     outline: none;
     background: var(--primary_color);
     border-radius: 30px;
     border: none;
     cursor: pointer;
 }
+
 .price_card2 {
     background: #e6533c;
     transform: scale(1.1);
 }
-.price_card2 .price_btn{
+
+.price_card2 .price_btn {
     background: var(--secondary_color);
 }
 
 
+@media screen and (min-width:1440px) {
+    .nav_wrapper,.banner_wrapper,.section_wrapper,.calc_items,.team_persons,.packages_card,.contact_item,.footer_contents{
+        width: 1920px;
+    }
+    .banner_contents{
+        max-width: 500px;
+    }
+    .banner_contents p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    .excersise_wrap {
+        display: grid;
+        grid-template-rows: repeat(2, 300px);
+    }
+    .form { 
+        grid-template-rows: repeat(3, 85px); 
+    }
+    .price_card {
+        padding: 50px 50px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .banner_wrapper {
+        flex-direction: column;
+    }
+
+    .banner_contents {
+        max-width: 500px;
+        align-self: flex-start;
+    }
+
+    .tittles {
+        width: 65%;
+    }
+}
 
 @media screen and (max-width:992px) {
-    .section_wrapper{
-        width: 90%;   
+    .section_wrapper {
+        width: 90%;
     }
+
     .nav_wrapper {
         width: 90%;
         margin-bottom: 40px;
     }
-    nav.nav a{
+
+    nav.nav a {
         font-size: 1rem;
         margin-right: 25px;
     }
-    .banner_wrapper{
+
+    .banner_wrapper {
         flex-direction: column;
     }
+
     .banner_contents {
         max-width: 500px;
         align-self: flex-start;
         margin-bottom: 60px;
     }
+
     .card.card2 {
         bottom: 25%;
         left: 0%;
     }
-    .habit_cards{
-        grid-template-columns: repeat(2,250px);
+
+    .habit_cards {
+        grid-template-columns: repeat(2, 250px);
+        justify-content: space-around;
     }
+
     .tittles {
         width: 90%;
     }
-    .tittles p{
+
+    .tittles p {
         padding: 0 85px;
     }
+
     .join_card {
         padding: 30px 30px;
     }
-    .card_content,.card_img {
+
+    .card_content,
+    .card_img {
         flex-basis: 45%;
-    } 
+    }
+
+    .card_content {
+        max-width: 280px;
+    }
+
     .card_content h2 {
         font-size: 2.25rem;
         line-height: 45px;
     }
+
     .card_img img {
-        width: 100%; 
+        width: 100%;
     }
 
     .training_tittles {
@@ -894,33 +967,36 @@ div#map iframe {
     .excersise1 {
         grid-area: 1 / 1 / 2 / 4;
     }
-    
+
     .excersise2 {
         grid-area: 1 / 4 / 2 / 9;
     }
-    
+
     .excersise3 {
         grid-area: 1 / 9 / 2 / 14;
     }
-    
+
     .excersise4 {
         grid-area: 2 / 1 / 3 / 5;
     }
-    
+
     .excersise5 {
         grid-area: 2 / 5 / 3 / 9;
     }
-    
+
     .excersise6 {
         grid-area: 2 / 9 / 3 / -1;
     }
+
     .calculator {
         margin: 80px 0px;
     }
-    .calc_items{
+
+    .calc_items {
         flex-direction: column;
     }
-    .bmi_form{
+
+    .bmi_form {
         width: 100%;
         margin-top: 80px;
     }
@@ -937,35 +1013,41 @@ div#map iframe {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .footer_logo {
         max-width: 450px;
     }
+
     .short_links {
         min-width: 100%;
         margin-top: 50px;
         justify-content: flex-start;
         font-size: 1.2rem;
     }
+
     .link_One {
         margin-right: 50px;
     }
 
-    .contact_item{
+    .contact_item {
         flex-direction: column;
         align-items: flex-start;
     }
-    #form_wrapper{
+
+    #form_wrapper {
         min-width: 100%;
     }
-    #map{
+
+    #map {
         min-width: 100%;
         margin-top: 60px;
     }
 
-    .packages_card{
+    .packages_card {
         width: 90%;
         flex-wrap: wrap;
     }
+
     .price_card {
         min-width: 300px;
         padding: 40px 0px;
@@ -973,31 +1055,41 @@ div#map iframe {
         flex-direction: column;
         align-items: center;
     }
-    .price_card h4{
+
+    .price_card h4 {
         align-self: flex-start;
     }
-    .price_card1,.price_card2,.price_card3{
+
+    .price_card1,
+    .price_card2,
+    .price_card3 {
         flex-basis: 30%;
         margin-bottom: 50px;
     }
-    .price_card2{
+
+    .price_card2 {
         transform: none;
+    }
+
+    .contact_wrapper {
+        padding: 0px 0px;
     }
 }
 
-
-
 @media screen and (max-width:576px) {
-    html{
+    html {
         font-size: 12px;
     }
-    .logo h2{
+
+    .logo h2 {
         font-size: 3rem;
     }
+
     .nav_wrapper {
         width: 90%;
         margin-bottom: 15px;
     }
+
     nav.nav {
         position: fixed;
         top: 0;
@@ -1012,64 +1104,78 @@ div#map iframe {
         transition: 0.4s ease-out;
         z-index: 11;
         border-left: 1px solid #d1d1d1;
-        
+
     }
-    .nav_open,.nav_close{
+
+    .nav_open,
+    .nav_close {
         display: block;
     }
+
     label i {
         color: #fff;
         font-size: 2rem;
     }
+
     i.nav_close {
         position: absolute;
         top: 10px;
         left: 10px;
     }
-    nav.nav a{
+
+    nav.nav a {
         margin-right: 0px;
         margin-top: 20px;
     }
-    nav.nav a:last-child{
+
+    nav.nav a:last-child {
         margin-right: 0px;
     }
 
-    #navbar_active:checked ~ nav.nav{
+    #navbar_active:checked~nav.nav {
         right: 0;
     }
-    #navbar_active:checked ~ #overlay{
+
+    #navbar_active:checked~#overlay {
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
-        left: 0; 
+        left: 0;
     }
-    
-    .banner_wrapper{
+
+    .banner_wrapper {
         width: 90%;
     }
+
     .banner_contents {
         max-width: 290px;
     }
+
     .banner_contents h2 {
         font-size: 3rem;
         line-height: 42px;
     }
+
     .banner_contents p {
         padding: 15px 100px 25px 0;
     }
+
     span.ex_font {
         font-size: 6rem;
         margin-right: 10px;
     }
+
     .hero_btn {
         font-size: 1rem;
         padding: 10px 20px;
         outline: none;
     }
+
     .banner_image img {
         width: 90%;
     }
+
     .card {
         width: 130px;
         height: 70px;
@@ -1083,21 +1189,26 @@ div#map iframe {
         box-sizing: border-box;
         padding-left: 20px;
     }
+
     .card1 {
         position: absolute;
         top: 10%;
         right: 5%;
     }
+
     .card1 h4 {
         font-size: 2rem;
     }
+
     .card2 h4 {
         line-height: 30px;
         margin-left: 25px;
     }
+
     .card2 p {
         margin-left: 25px;
     }
+
     .card.card2::before {
         content: "\f144";
         font-size: 30px;
@@ -1109,30 +1220,60 @@ div#map iframe {
     .tittles h2 {
         font-size: 2.2rem;
     }
+
     .tittles p {
         padding: 0 20px;
         margin-bottom: 40px;
         line-height: 20px;
     }
+
     .habit {
         padding-bottom: 20px;
     }
-    .habit p{
+
+    .habit p {
         font-size: 1rem;
     }
+
     .habit_cards {
         grid-template-columns: repeat(1, 250px);
     }
 
     .join_card {
+        width: 90%;
         flex-direction: column;
         padding: 15px;
+        margin-top: 45px;
+        align-items: flex-start;
     }
-    
+
+    .card_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 10% 43%;
+        border-radius: 18px;
+    }
+
     .card_content {
+        max-width: 260px;
         margin-bottom: 30px;
     }
-        
+
+    .card_content h2 {
+        margin-bottom: 10px;
+    }
+
+    .card_content p {
+        margin-bottom: 15px;
+    }
+
+    .join_btn {
+        width: 100%;
+        padding: 10px 20px !important;
+        font-size: 1.4rem !important;
+    }
+
     .card_img {
         background-size: 178%;
         background-position: 80% 10%;
@@ -1141,31 +1282,40 @@ div#map iframe {
         flex-basis: auto;
     }
 
-    .excersise6, .excersise3 {
+    .excersise6,
+    .excersise3 {
         display: none;
     }
+
     .excersise_wrap {
         grid-template-rows: repeat(2, 170px);
     }
-    .training_tittles p{
+
+    .training_tittles p {
         margin-bottom: 30px;
     }
+
     .excersise h4 {
         padding-right: 20px;
         font-weight: 600;
     }
+
     .excersise1 {
         grid-area: 1 / 1 / 2 / 7;
         background-size: cover;
     }
+
     .excersise2 {
         grid-area: 1 / 7 / 2 / -1;
         background-size: 250%;
         background-position: 70%;
     }
+
     .excersise4 {
         grid-area: 2 / 1 / 3 / 6;
+        align-items: flex-end;
     }
+
     .excersise5 {
         grid-area: 2 / 6 / 3 / -1;
     }
@@ -1173,33 +1323,53 @@ div#map iframe {
     .training_tittles {
         width: 80%;
     }
+
     .training_tittles h2 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
     }
+
     .training_tittles p {
         line-height: 15px;
     }
 
-    .calc_items p{
+    .calculator {
+        margin: 30px 0px;
+    }
+
+    .calc_items p {
         font-size: 1rem;
     }
-    .form {
-        grid-template-columns: repeat(2, 130px);
-        grid-template-rows: repeat(2, 30px);
+
+    .bmi_form {
+        margin-top: 40px;
     }
-    form.form input{
+
+    form.form input {
         font-size: 1rem;
     }
-    #gender, #activity{
+
+    #gender,
+    #activity {
         font-size: 1rem;
-        height: 30px;
+        height: 40px;
     }
-    .gender_wrapper::before, .activity_wrapper::before {
+
+    .gender_wrapper::before,
+    .activity_wrapper::before {
         font-size: 16px;
         top: 28%;
     }
+
     button.calculate-btn {
         margin-top: 10px;
+    }
+
+    .team_tittles h2 {
+        padding-top: 40px;
+    }
+
+    .team_tittles p {
+        margin-bottom: 0;
     }
 
     .team_persons {
@@ -1209,13 +1379,17 @@ div#map iframe {
         margin-top: 20px;
         padding: 15px;
     }
+
     .trainer_dtl h4 {
         font-size: 1.6rem;
     }
+
     .trainer_dtl p {
         font-size: 1.2rem;
     }
-    .person1,.person4{
+
+    .person1,
+    .person4 {
         display: none;
     }
 
@@ -1226,26 +1400,40 @@ div#map iframe {
 
     .hero_btn {
         font-size: 1rem;
-        padding: 20px 20px;
+        padding: 15px 20px;
         outline: none;
     }
 
-    .contact_item{
+    .contact_item {
         width: 90%;
     }
-    .challenge_form {
-        grid-template-columns: repeat(2, 140px);
+
+    .price_wrapper {
+        padding: 40px 0;
     }
+
     .price_wrapper h2 {
         font-size: 1.7rem;
+        padding-bottom: 35px;
     }
-    .price_card{
+
+    .price_card {
         min-width: 280px;
     }
+
+    .price_card3 {
+        margin-bottom: 30;
+    }
+
     .price_btn {
         padding: 20px 50px;
     }
-    div#map iframe{
+
+    div#map iframe {
         height: 300px;
+    }
+
+    .contact_wrapper {
+        padding: 0px 0;
     }
 }
