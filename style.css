@@ -366,13 +366,13 @@ div#habit_wrapper {
 .excersise1 {
     background: linear-gradient(rgba(6, 255, 210, 0.5), rgba(6, 255, 210, 0.5)), url(img/exercise1.jpg) center / cover no-repeat;
     align-items: flex-end;
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 4;
 }
 
 .excersise2 {
     background: linear-gradient(rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4)), url(img/exercise2.png) center / cover no-repeat;
     align-items: flex-start;
-    grid-area: 1 / 3 / 2 / 10;
+    grid-area: 1 / 4 / 2 / 10;
 }
 
 .excersise3 {
@@ -859,7 +859,7 @@ div#map iframe {
 
 @media screen and (min-width:1440px) {
     .nav_wrapper,.banner_wrapper,.section_wrapper,.calc_items,.team_persons,.packages_card,.contact_item,.footer_contents{
-        width: 1920px;
+        width: 1224px;
     }
     .banner_contents{
         max-width: 500px;
