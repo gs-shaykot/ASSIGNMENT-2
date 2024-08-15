@@ -872,9 +872,9 @@ div#map iframe {
         display: grid;
         grid-template-rows: repeat(2, 300px);
     }
-    .form { 
+    /*.form { 
         grid-template-rows: repeat(3, 85px); 
-    }
+    }*/
     .price_card {
         padding: 50px 50px;
     }
